@@ -27,18 +27,38 @@ class CreateViewController: UIViewController {
 
     @IBAction func onDoneTapped(_ sender: UIBarButtonItem) {
         var data: [String: String] = [:]
-        data["name"] = nameInput.text?.trimmingCharacters(in: .whitespacesAndNewlines)
-        data["surname"] = surnameInput.text?.trimmingCharacters(in: .whitespacesAndNewlines)
-        data["age"] = ageInput.text?.trimmingCharacters(in: .whitespacesAndNewlines)
-        data["occupation"] = occupationInput.text?.trimmingCharacters(in: .whitespacesAndNewlines)
-        data["dni"] = dniInput.text?.trimmingCharacters(in: .whitespacesAndNewlines)
-        data["cv"] = cvInput.text?.trimmingCharacters(in: .whitespacesAndNewlines)
         
-        model.addNewContact(data: data) {
-            self.navigationController?.popViewController(animated: true)
+        let name = nameInput.text?.trimmingCharacters(in: .whitespacesAndNewlines)
+        let surname = surnameInput.text?.trimmingCharacters(in: .whitespacesAndNewlines)
+        let age = ageInput.text?.trimmingCharacters(in: .whitespacesAndNewlines)
+        let occupation = occupationInput.text?.trimmingCharacters(in: .whitespacesAndNewlines)
+        let dni = dniInput.text?.trimmingCharacters(in: .whitespacesAndNewlines)
+        let cv = cvInput.text?.trimmingCharacters(in: .whitespacesAndNewlines)
+        
+        if name != nil && name != ""
+            && surname != nil && surname != ""
+            && age != nil && age != ""
+            && occupation != nil && occupation != ""
+            && dni != nil && dni != ""
+            && cv != nil && cv != "" {
+            
+            data["name"] = nameInput.text?.trimmingCharacters(in: .whitespacesAndNewlines)
+            data["surname"] = surnameInput.text?.trimmingCharacters(in: .whitespacesAndNewlines)
+            data["age"] = ageInput.text?.trimmingCharacters(in: .whitespacesAndNewlines)
+            data["occupation"] = occupationInput.text?.trimmingCharacters(in: .whitespacesAndNewlines)
+            data["dni"] = dniInput.text?.trimmingCharacters(in: .whitespacesAndNewlines)
+            data["cv"] = cvInput.text?.trimmingCharacters(in: .whitespacesAndNewlines)
+            
+            model.addNewContact(data: data) {
+                self.navigationController?.popViewController(animated: true)
+            }
         }
     }
     
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
+    }
     
     
 }

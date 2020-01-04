@@ -39,7 +39,6 @@ class Repository {
         try! realm.write {
             let contacts = realm.objects(Contact.self)
             let id = contacts.count + 1
-            print("___________ CREATED WITH ID: \(id) _____________")
             let newContact = Contact()
             newContact.id = id
             newContact.name = data["name"]!
