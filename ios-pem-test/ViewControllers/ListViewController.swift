@@ -8,6 +8,17 @@
 
 import UIKit
 
+
+
+class ContactCell: UITableViewCell {
+    
+    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var surnameLabel: UILabel!
+    @IBOutlet weak var dniLabel: UILabel!
+    
+}
+
+
 class ListViewController: UITableViewController {
 
     override func viewDidLoad() {
