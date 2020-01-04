@@ -8,6 +8,25 @@
 
 import UIKit
 
-class ListModel: NSObject {
+class ListModel {
+    
+    var repository: Repository?
+    var contactList: [Contact]
+    
+    init() {
+        self.repository = Repository.getInstance()
+        self.contactList = []
+    }
+    
+    public func getContactList(completion: @escaping (() -> ())){
+        repository?.loadContactList(completion: { (loadedContactList) in
+            self.contactList = loadedContactList
+            completion()
+        })
+    }
+    
+    public func getContactsCount() -> Int {
+        return self.contactList.count
+    }
 
 }

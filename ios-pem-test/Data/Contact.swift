@@ -6,8 +6,16 @@
 //  Copyright © 2020 kevinrx25. All rights reserved.
 //
 
-import UIKit
+import Foundation
+import RealmSwift
 
-class Contact: NSObject {
-
+class Contact: Object {
+    
+    @objc dynamic var name: String = ""
+    @objc dynamic var surname: String = ""
+    @objc dynamic var age: Int = 0
+    @objc dynamic var occupation: String = ""
+    @objc dynamic var dni: String = ""
+    @objc dynamic var cv: String = ""
+    
 }
