@@ -166,8 +166,20 @@
                         <viewLayoutGuide key="safeArea" id="Uxo-mK-MPl"/>
                     </view>
                     <navigationItem key="navigationItem" id="v3S-JG-cdf">
-                        <barButtonItem key="rightBarButtonItem" title="Delete" id="vEZ-60-RKm"/>
+                        <barButtonItem key="rightBarButtonItem" title="Delete" id="vEZ-60-RKm">
+                            <connections>
+                                <action selector="onDeleteTapped:" destination="x7d-25-H4a" id="hfZ-kO-bBr"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="ageLabel" destination="PAG-vv-xGJ" id="I9H-Lh-FZh"/>
+                        <outlet property="cvLabel" destination="602-bl-hJ3" id="it0-lB-awj"/>
+                        <outlet property="dniLabel" destination="6Z2-jM-PiS" id="E4K-Mw-qZC"/>
+                        <outlet property="nameLabel" destination="4pi-qD-qx3" id="YSH-VN-FAd"/>
+                        <outlet property="occupationLabel" destination="Pfa-HU-Pdg" id="NLL-c0-5FC"/>
+                        <outlet property="surnameLabel" destination="yvJ-As-lIf" id="YeX-QB-YFF"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VQ8-R2-A4f" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

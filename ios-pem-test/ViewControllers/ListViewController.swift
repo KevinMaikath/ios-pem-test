@@ -44,9 +44,23 @@ class ListViewController: UITableViewController {
         return cell
     }
     
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        selectedContact = model.contactList[indexPath.row]
+        
+        performSegue(withIdentifier: "ListToDetailSegue", sender: self)
+    }
+    
     override func viewWillAppear(_ animated: Bool) {
         model.getContactList {
             self.tableView.reloadData()
+        }
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "ListToDetailSegue" {
+            let detailView = segue.destination as! DetailViewController
+            detailView.contact = self.selectedContact
         }
     }
 

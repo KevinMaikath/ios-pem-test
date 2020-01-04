@@ -8,6 +8,18 @@
 
 import UIKit
 
-class DetailModel: NSObject {
+class DetailModel {
+    
+    var repository: Repository?
+    
+    init() {
+        self.repository = Repository.getInstance()
+    }
+    
+    public func deleteContact(contact: Contact, completion: @escaping (() -> ())){
+        repository?.removeContact(contact: contact, completion: {
+            completion()
+        })
+    }
 
 }
