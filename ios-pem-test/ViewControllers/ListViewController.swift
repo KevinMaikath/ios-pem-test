@@ -9,16 +9,6 @@
 import UIKit
 
 
-
-class ContactCell: UITableViewCell {
-    
-    @IBOutlet weak var nameLabel: UILabel!
-    @IBOutlet weak var surnameLabel: UILabel!
-    @IBOutlet weak var dniLabel: UILabel!
-    
-}
-
-
 class ListViewController: UITableViewController {
     
     let model: ListModel = ListModel()
@@ -46,19 +36,18 @@ class ListViewController: UITableViewController {
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "contactCell", for: indexPath) as! ContactCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "contactCell", for: indexPath) as! UITableViewCell
         
         let contact = model.contactList[indexPath.row]
-        cell.nameLabel.text = contact.name
-        cell.surnameLabel.text = contact.surname
-        cell.dniLabel.text = contact.dni
+        cell.textLabel?.text = contact.name + " " + contact.surname
         
         return cell
     }
     
-    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 50
+    override func viewWillAppear(_ animated: Bool) {
+        model.getContactList {
+            self.tableView.reloadData()
+        }
     }
-    
 
 }

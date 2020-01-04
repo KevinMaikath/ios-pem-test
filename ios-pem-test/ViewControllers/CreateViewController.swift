@@ -9,22 +9,36 @@
 import UIKit
 
 class CreateViewController: UIViewController {
-
+    
+    private let model: CreateModel = CreateModel()
+    
+    @IBOutlet weak var nameInput: UITextField!
+    @IBOutlet weak var surnameInput: UITextField!
+    @IBOutlet weak var ageInput: UITextField!
+    @IBOutlet weak var occupationInput: UITextField!
+    @IBOutlet weak var dniInput: UITextField!
+    @IBOutlet weak var cvInput: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
     }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBAction func onDoneTapped(_ sender: UIBarButtonItem) {
+        var data: [String: String] = [:]
+        data["name"] = nameInput.text?.trimmingCharacters(in: .whitespacesAndNewlines)
+        data["surname"] = surnameInput.text?.trimmingCharacters(in: .whitespacesAndNewlines)
+        data["age"] = ageInput.text?.trimmingCharacters(in: .whitespacesAndNewlines)
+        data["occupation"] = occupationInput.text?.trimmingCharacters(in: .whitespacesAndNewlines)
+        data["dni"] = dniInput.text?.trimmingCharacters(in: .whitespacesAndNewlines)
+        data["cv"] = cvInput.text?.trimmingCharacters(in: .whitespacesAndNewlines)
+        
+        model.addNewContact(data: data) {
+            self.navigationController?.popViewController(animated: true)
+        }
     }
-    */
-
+    
+    
+    
 }

@@ -16,48 +16,25 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="84" id="M5g-0v-Dmb" customClass="ContactCell" customModule="ios_pem_test" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="414" height="84"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="contactCell" textLabel="wZm-k0-GaN" style="IBUITableViewCellStyleDefault" id="gnh-m5-iAm">
+                                <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="M5g-0v-Dmb" id="bz8-O6-3wI" customClass="ContactCell" customModule="ios_pem_test" customModuleProvider="target">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="84"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="gnh-m5-iAm" id="Mo9-pi-X9Y">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IqT-Rc-yek">
-                                            <rect key="frame" x="30" y="16" width="48" height="21.5"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Surname" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5mz-K5-gAI">
-                                            <rect key="frame" x="88" y="16" width="72.5" height="21"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DNI" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i2T-BP-Dfv">
-                                            <rect key="frame" x="370.5" y="57" width="28.5" height="21"/>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="wZm-k0-GaN">
+                                            <rect key="frame" x="20" y="0.0" width="374" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
-                                    <constraints>
-                                        <constraint firstItem="i2T-BP-Dfv" firstAttribute="bottom" secondItem="bz8-O6-3wI" secondAttribute="bottomMargin" constant="5" id="PEX-ji-yEd"/>
-                                        <constraint firstItem="5mz-K5-gAI" firstAttribute="leading" secondItem="IqT-Rc-yek" secondAttribute="trailing" constant="10" id="QjA-0C-p4k"/>
-                                        <constraint firstItem="5mz-K5-gAI" firstAttribute="top" secondItem="bz8-O6-3wI" secondAttribute="topMargin" constant="5" id="Ty4-HD-3Fj"/>
-                                        <constraint firstItem="IqT-Rc-yek" firstAttribute="leading" secondItem="bz8-O6-3wI" secondAttribute="leadingMargin" constant="10" id="VZ9-Tb-0v7"/>
-                                        <constraint firstItem="IqT-Rc-yek" firstAttribute="top" secondItem="bz8-O6-3wI" secondAttribute="topMargin" constant="5" id="cc7-DV-3Kq"/>
-                                        <constraint firstAttribute="trailing" secondItem="i2T-BP-Dfv" secondAttribute="trailing" constant="15" id="oq0-8E-xQI"/>
-                                    </constraints>
                                 </tableViewCellContentView>
-                                <connections>
-                                    <outlet property="dniLabel" destination="i2T-BP-Dfv" id="CZQ-8a-kQC"/>
-                                    <outlet property="nameLabel" destination="IqT-Rc-yek" id="chE-y7-opl"/>
-                                    <outlet property="surnameLabel" destination="5mz-K5-gAI" id="afX-L6-CYG"/>
-                                </connections>
                             </tableViewCell>
                         </prototypes>
+                        <sections/>
                         <connections>
                             <outlet property="dataSource" destination="KI4-i6-sW2" id="Oec-st-Hbo"/>
                             <outlet property="delegate" destination="KI4-i6-sW2" id="aKp-Li-VLG"/>
@@ -307,8 +284,20 @@
                         <viewLayoutGuide key="safeArea" id="NaL-rm-Xyz"/>
                     </view>
                     <navigationItem key="navigationItem" id="lfW-95-Hge">
-                        <barButtonItem key="rightBarButtonItem" title="Done" id="rg8-PM-y7w"/>
+                        <barButtonItem key="rightBarButtonItem" title="Done" id="rg8-PM-y7w">
+                            <connections>
+                                <action selector="onDoneTapped:" destination="P8V-tz-SGd" id="TO2-62-zt1"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="ageInput" destination="Ii6-I5-bJP" id="Jwx-4o-ZWR"/>
+                        <outlet property="cvInput" destination="T4D-ru-7Uq" id="7RS-Ex-Lbm"/>
+                        <outlet property="dniInput" destination="NRM-Is-1e5" id="s3D-pX-MdC"/>
+                        <outlet property="nameInput" destination="fL7-q2-hcm" id="ByL-SV-hDe"/>
+                        <outlet property="occupationInput" destination="GeK-5D-hD0" id="neL-sr-gfD"/>
+                        <outlet property="surnameInput" destination="UYt-Nd-jdY" id="KUv-s3-Npx"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="602-OB-LZ3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

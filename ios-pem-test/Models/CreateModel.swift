@@ -8,6 +8,18 @@
 
 import UIKit
 
-class CreateModel: NSObject {
+class CreateModel {
+    
+    var repository: Repository?
+    
+    init() {
+        self.repository = Repository.getInstance()
+    }
+    
+    public func addNewContact(data: [String: String], completion: @escaping (() -> ())){
+        repository?.addNewContact(data: data, completion: {
+            completion()
+        })
+    }
 
 }

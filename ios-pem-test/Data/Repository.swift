@@ -35,12 +35,25 @@ class Repository {
         completion(self.contactList)
     }
     
-    public func addNewContact(data: [String: Any], completion: @escaping (() -> ())) {
-        
+    public func addNewContact(data: [String: String], completion: @escaping (() -> ())) {
+        try! realm.write {
+            let contacts = realm.objects(Contact.self)
+            let id = contacts.count + 1
+            let newContact = Contact()
+            newContact.id = id
+            newContact.name = data["name"]!
+            newContact.surname = data["surname"]!
+            newContact.age = Int(data["age"]!)!
+            newContact.occupation = data["occupation"]!
+            newContact.dni = data["dni"]!
+            newContact.cv = data["cv"]!
+            realm.add(newContact)
+        }
+        completion()
     }
     
     public func removeContact(data: [String: Any], completion: @escaping (() -> ())) {
-        
+        completion()
     }
     
 }
