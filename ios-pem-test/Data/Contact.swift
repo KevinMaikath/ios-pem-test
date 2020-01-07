@@ -19,5 +19,9 @@ class Contact: Object {
     @objc dynamic var dni: String = ""
     @objc dynamic var cv: String = ""
     @objc dynamic var rating: Int = 0
+ 
+    override static func primaryKey() -> String? {
+      return "id"
+    }
     
 }

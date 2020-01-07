@@ -64,4 +64,23 @@ class Repository {
         completion()
     }
     
+    public func editRating(_ contact: Contact, _ value: String, completion: @escaping (() -> ())) {
+        
+        try! realm.write {
+            let contacts = realm.objects(Contact.self)
+            let newContact = Contact()
+            newContact.id = contact.id
+            newContact.name = contact.name
+            newContact.surname = contact.surname
+            newContact.age = contact.age
+            newContact.occupation = contact.occupation
+            newContact.dni = contact.dni
+            newContact.cv = contact.cv
+            newContact.rating = Int(value)!
+            realm.add(newContact, update: .all)
+        }
+
+        completion()
+    }
+    
 }

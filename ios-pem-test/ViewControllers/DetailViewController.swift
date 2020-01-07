@@ -22,6 +22,8 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var cvLabel: UILabel!
     @IBOutlet weak var ratingLabel: UILabel!
     
+    var newRatingValue = "0"
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -41,6 +43,37 @@ class DetailViewController: UIViewController {
     @IBAction func onDeleteTapped(_ sender: UIBarButtonItem) {
         model.deleteContact(contact: self.contact!) {
             self.navigationController?.popViewController(animated: true)
+        }
+    }
+    
+    func selectRating(_ value: Int){
+        newRatingValue = "\(value)"
+        ratingLabel.text = newRatingValue
+    }
+    
+    @IBAction func starTapped_1(_ sender: UIButton) {
+        selectRating(1)
+    }
+    
+    @IBAction func starTapped_2(_ sender: UIButton) {
+        selectRating(2)
+    }
+    
+    @IBAction func starTapped_3(_ sender: UIButton) {
+        selectRating(3)
+    }
+    
+    @IBAction func starTapped_4(_ sender: UIButton) {
+        selectRating(4)
+    }
+    
+    @IBAction func starTapped_5(_ sender: UIButton) {
+        selectRating(5)
+    }
+    
+    @IBAction func saveNewRating(_ sender: UIButton) {
+        model.saveNewRating(contact!, newRatingValue) {
+            
         }
     }
     

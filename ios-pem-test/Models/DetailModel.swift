@@ -21,5 +21,11 @@ class DetailModel {
             completion()
         })
     }
+    
+    public func saveNewRating(_ contact: Contact,_ value: String, completion: @escaping (() -> ())){
+        repository?.editRating(contact, value, completion: {
+            completion()
+        })
+    }
 
 }
