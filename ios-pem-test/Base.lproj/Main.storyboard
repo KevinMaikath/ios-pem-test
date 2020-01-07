@@ -318,11 +318,6 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZHG-a4-jYj">
-                                <rect key="frame" x="114" y="314" width="241" height="34"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="New curriculum." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="RB7-MH-Bj3">
                                 <rect key="frame" x="40" y="411" width="295" height="246"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -330,14 +325,57 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HI5-vu-pE0">
+                                <rect key="frame" x="104" y="319" width="22" height="22"/>
+                                <state key="normal" image="star.fill" catalog="system"/>
+                                <connections>
+                                    <action selector="starTapped_1:" destination="P8V-tz-SGd" eventType="touchUpInside" id="sVU-VD-nrL"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lpQ-x1-QHY">
+                                <rect key="frame" x="141" y="319" width="22" height="22"/>
+                                <state key="normal" image="star.fill" catalog="system"/>
+                                <connections>
+                                    <action selector="starTapped_2:" destination="P8V-tz-SGd" eventType="touchUpInside" id="i1t-YZ-YdT"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="54D-P5-bti">
+                                <rect key="frame" x="178" y="319" width="22" height="22"/>
+                                <state key="normal" image="star.fill" catalog="system"/>
+                                <connections>
+                                    <action selector="starTapped_3:" destination="P8V-tz-SGd" eventType="touchUpInside" id="oq2-QF-VKc"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tEy-xe-JJI">
+                                <rect key="frame" x="215" y="319" width="22" height="22"/>
+                                <state key="normal" image="star.fill" catalog="system"/>
+                                <connections>
+                                    <action selector="starTapped_4:" destination="P8V-tz-SGd" eventType="touchUpInside" id="Izk-RF-RUm"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pbo-px-Tpk">
+                                <rect key="frame" x="252" y="319" width="22" height="22"/>
+                                <state key="normal" image="star.fill" catalog="system"/>
+                                <connections>
+                                    <action selector="starTapped_5:" destination="P8V-tz-SGd" eventType="touchUpInside" id="T57-M5-NrF"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(value)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RM1-iV-GAN">
+                                <rect key="frame" x="292" y="319" width="53" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="GeK-5D-hD0" firstAttribute="leading" secondItem="MwG-Dn-P47" secondAttribute="trailing" constant="20" id="25f-c2-AFF"/>
                             <constraint firstItem="3XK-8M-mWX" firstAttribute="top" secondItem="EPS-gs-B4d" secondAttribute="bottom" constant="30" id="2MC-as-Sfh"/>
+                            <constraint firstItem="54D-P5-bti" firstAttribute="leading" secondItem="lpQ-x1-QHY" secondAttribute="trailing" constant="15" id="2qH-FV-kl6"/>
                             <constraint firstItem="EPS-gs-B4d" firstAttribute="leading" secondItem="NaL-rm-Xyz" secondAttribute="leading" constant="40" id="2wu-jJ-RmO"/>
                             <constraint firstItem="NRM-Is-1e5" firstAttribute="leading" secondItem="Qav-28-vTh" secondAttribute="trailing" constant="20" id="4UH-ug-1vx"/>
-                            <constraint firstItem="ZHG-a4-jYj" firstAttribute="leading" secondItem="odY-Jc-fa9" secondAttribute="trailing" constant="20" id="9vN-H1-Svs"/>
+                            <constraint firstItem="HI5-vu-pE0" firstAttribute="top" secondItem="NRM-Is-1e5" secondAttribute="bottom" constant="25" id="8Gw-vg-6jt"/>
+                            <constraint firstItem="RM1-iV-GAN" firstAttribute="top" secondItem="NRM-Is-1e5" secondAttribute="bottom" constant="25" id="Ad0-bo-ZqO"/>
                             <constraint firstItem="odY-Jc-fa9" firstAttribute="top" secondItem="Qav-28-vTh" secondAttribute="bottom" constant="30" id="BHE-KE-0MC"/>
                             <constraint firstItem="Ii6-I5-bJP" firstAttribute="leading" secondItem="3XK-8M-mWX" secondAttribute="trailing" constant="20" id="BiQ-MX-eZk"/>
                             <constraint firstItem="odY-Jc-fa9" firstAttribute="leading" secondItem="NaL-rm-Xyz" secondAttribute="leading" constant="40" id="CB3-MT-QD2"/>
@@ -347,26 +385,33 @@
                             <constraint firstItem="NaL-rm-Xyz" firstAttribute="trailing" secondItem="fL7-q2-hcm" secondAttribute="trailing" constant="20" id="Dls-QM-WPO"/>
                             <constraint firstItem="NaL-rm-Xyz" firstAttribute="trailing" secondItem="NRM-Is-1e5" secondAttribute="trailing" constant="20" id="I3p-QC-gA0"/>
                             <constraint firstItem="3XK-8M-mWX" firstAttribute="leading" secondItem="NaL-rm-Xyz" secondAttribute="leading" constant="40" id="Krm-Xl-1RK"/>
+                            <constraint firstItem="HI5-vu-pE0" firstAttribute="leading" secondItem="odY-Jc-fa9" secondAttribute="trailing" constant="10" id="LER-Ac-UJ6"/>
                             <constraint firstItem="NaL-rm-Xyz" firstAttribute="trailing" secondItem="RB7-MH-Bj3" secondAttribute="trailing" constant="40" id="LEX-0p-lpn"/>
+                            <constraint firstItem="NaL-rm-Xyz" firstAttribute="trailing" secondItem="RM1-iV-GAN" secondAttribute="trailing" constant="30" id="Liy-83-wSh"/>
                             <constraint firstItem="GeK-5D-hD0" firstAttribute="top" secondItem="Ii6-I5-bJP" secondAttribute="bottom" constant="15" id="OjO-Um-xsY"/>
                             <constraint firstItem="RB7-MH-Bj3" firstAttribute="leading" secondItem="NaL-rm-Xyz" secondAttribute="leading" constant="40" id="Raw-Cl-Xif"/>
+                            <constraint firstItem="pbo-px-Tpk" firstAttribute="leading" secondItem="tEy-xe-JJI" secondAttribute="trailing" constant="15" id="TqO-wQ-T0i"/>
                             <constraint firstItem="fL7-q2-hcm" firstAttribute="leading" secondItem="LgI-ll-Ylc" secondAttribute="trailing" constant="20" id="WP9-Rk-ija"/>
-                            <constraint firstItem="NaL-rm-Xyz" firstAttribute="trailing" secondItem="ZHG-a4-jYj" secondAttribute="trailing" constant="20" id="Y5z-XE-LoV"/>
                             <constraint firstItem="UKe-Lh-Pel" firstAttribute="top" secondItem="odY-Jc-fa9" secondAttribute="bottom" constant="30" id="YBt-Pq-d2z"/>
                             <constraint firstItem="EPS-gs-B4d" firstAttribute="top" secondItem="LgI-ll-Ylc" secondAttribute="bottom" constant="30" id="Z1m-gc-Kdj"/>
-                            <constraint firstItem="ZHG-a4-jYj" firstAttribute="top" secondItem="NRM-Is-1e5" secondAttribute="bottom" constant="20" id="Zyz-Af-vGA"/>
                             <constraint firstItem="Qav-28-vTh" firstAttribute="top" secondItem="MwG-Dn-P47" secondAttribute="bottom" constant="30" id="aUj-YN-D0v"/>
+                            <constraint firstItem="tEy-xe-JJI" firstAttribute="leading" secondItem="54D-P5-bti" secondAttribute="trailing" constant="15" id="b8N-p1-Aiq"/>
                             <constraint firstItem="UKe-Lh-Pel" firstAttribute="leading" secondItem="NaL-rm-Xyz" secondAttribute="leading" constant="40" id="boC-yf-1nb"/>
+                            <constraint firstItem="54D-P5-bti" firstAttribute="top" secondItem="NRM-Is-1e5" secondAttribute="bottom" constant="25" id="gUf-X6-RCy"/>
                             <constraint firstItem="Qav-28-vTh" firstAttribute="leading" secondItem="NaL-rm-Xyz" secondAttribute="leading" constant="40" id="gdd-sR-wXv"/>
                             <constraint firstItem="LgI-ll-Ylc" firstAttribute="top" secondItem="NaL-rm-Xyz" secondAttribute="top" constant="20" id="gs1-xB-1yb"/>
                             <constraint firstItem="NaL-rm-Xyz" firstAttribute="trailing" secondItem="UYt-Nd-jdY" secondAttribute="trailing" constant="20" id="jgZ-jD-etY"/>
                             <constraint firstItem="UYt-Nd-jdY" firstAttribute="top" secondItem="fL7-q2-hcm" secondAttribute="bottom" constant="15" id="l00-e2-m34"/>
                             <constraint firstItem="MwG-Dn-P47" firstAttribute="top" secondItem="3XK-8M-mWX" secondAttribute="bottom" constant="30" id="l2W-EH-qHY"/>
+                            <constraint firstItem="lpQ-x1-QHY" firstAttribute="leading" secondItem="HI5-vu-pE0" secondAttribute="trailing" constant="15" id="l7m-hI-g0k"/>
+                            <constraint firstItem="tEy-xe-JJI" firstAttribute="top" secondItem="NRM-Is-1e5" secondAttribute="bottom" constant="25" id="leU-qz-6Oi"/>
                             <constraint firstItem="NaL-rm-Xyz" firstAttribute="trailing" secondItem="Ii6-I5-bJP" secondAttribute="trailing" constant="20" id="mmd-1I-FVi"/>
                             <constraint firstItem="NRM-Is-1e5" firstAttribute="top" secondItem="GeK-5D-hD0" secondAttribute="bottom" constant="20" id="nLe-aN-xvk"/>
                             <constraint firstItem="RB7-MH-Bj3" firstAttribute="top" secondItem="UKe-Lh-Pel" secondAttribute="bottom" constant="20" id="opf-5U-ki9"/>
                             <constraint firstItem="NaL-rm-Xyz" firstAttribute="trailing" secondItem="GeK-5D-hD0" secondAttribute="trailing" constant="20" id="rxc-qN-Kzi"/>
                             <constraint firstItem="Ii6-I5-bJP" firstAttribute="top" secondItem="UYt-Nd-jdY" secondAttribute="bottom" constant="15" id="tKc-l9-WJo"/>
+                            <constraint firstItem="pbo-px-Tpk" firstAttribute="top" secondItem="NRM-Is-1e5" secondAttribute="bottom" constant="25" id="txF-vK-z2R"/>
+                            <constraint firstItem="lpQ-x1-QHY" firstAttribute="top" secondItem="NRM-Is-1e5" secondAttribute="bottom" constant="25" id="vtA-dG-xMb"/>
                             <constraint firstItem="NaL-rm-Xyz" firstAttribute="bottom" secondItem="RB7-MH-Bj3" secondAttribute="bottom" constant="10" id="wB4-SB-nLs"/>
                             <constraint firstItem="MwG-Dn-P47" firstAttribute="leading" secondItem="NaL-rm-Xyz" secondAttribute="leading" constant="40" id="zHM-bn-lPf"/>
                         </constraints>
@@ -385,7 +430,7 @@
                         <outlet property="dniInput" destination="NRM-Is-1e5" id="s3D-pX-MdC"/>
                         <outlet property="nameInput" destination="fL7-q2-hcm" id="ByL-SV-hDe"/>
                         <outlet property="occupationInput" destination="GeK-5D-hD0" id="neL-sr-gfD"/>
-                        <outlet property="ratingInput" destination="ZHG-a4-jYj" id="bTu-mC-hi5"/>
+                        <outlet property="ratingLabel" destination="RM1-iV-GAN" id="5sD-eo-DHI"/>
                         <outlet property="surnameInput" destination="UYt-Nd-jdY" id="KUv-s3-Npx"/>
                     </connections>
                 </viewController>
@@ -414,5 +459,6 @@
     </scenes>
     <resources>
         <image name="plus" catalog="system" width="64" height="56"/>
+        <image name="star.fill" catalog="system" width="64" height="58"/>
     </resources>
 </document>

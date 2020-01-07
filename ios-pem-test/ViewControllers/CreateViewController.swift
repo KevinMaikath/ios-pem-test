@@ -18,12 +18,15 @@ class CreateViewController: UIViewController {
     @IBOutlet weak var occupationInput: UITextField!
     @IBOutlet weak var dniInput: UITextField!
     @IBOutlet weak var cvInput: UITextView!
-    @IBOutlet weak var ratingInput: UITextField!
     
+    @IBOutlet weak var ratingLabel: UILabel!
+    private var ratingValue: String = "0"
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        self.ratingLabel.text = ratingValue
     }
     
 
@@ -36,7 +39,7 @@ class CreateViewController: UIViewController {
         let occupation = occupationInput.text?.trimmingCharacters(in: .whitespacesAndNewlines)
         let dni = dniInput.text?.trimmingCharacters(in: .whitespacesAndNewlines)
         let cv = cvInput.text?.trimmingCharacters(in: .whitespacesAndNewlines)
-        let rating = ratingInput.text?.trimmingCharacters(in: .whitespacesAndNewlines)
+        let rating = ratingValue
         
         if name != nil && name != ""
             && surname != nil && surname != ""
@@ -44,7 +47,7 @@ class CreateViewController: UIViewController {
             && occupation != nil && occupation != ""
             && dni != nil && dni != ""
             && cv != nil && cv != ""
-            && rating != nil && rating != "" {
+            && rating != "" {
             
             data["name"] = name
             data["surname"] = surname
@@ -60,10 +63,33 @@ class CreateViewController: UIViewController {
         }
     }
     
-    
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.view.endEditing(true)
     }
     
+    func selectRating(_ value: Int) {
+        self.ratingValue = "\(value)"
+        self.ratingLabel.text = ratingValue
+    }
+    
+    @IBAction func starTapped_1(_ sender: UIButton) {
+        selectRating(1)
+    }
+    
+    @IBAction func starTapped_2(_ sender: UIButton) {
+        selectRating(2)
+    }
+    
+    @IBAction func starTapped_3(_ sender: UIButton) {
+        selectRating(3)
+    }
+    
+    @IBAction func starTapped_4(_ sender: UIButton) {
+        selectRating(4)
+    }
+    
+    @IBAction func starTapped_5(_ sender: UIButton) {
+        selectRating(5)
+    }
     
 }
