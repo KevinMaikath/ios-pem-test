@@ -18,6 +18,7 @@ class CreateViewController: UIViewController {
     @IBOutlet weak var occupationInput: UITextField!
     @IBOutlet weak var dniInput: UITextField!
     @IBOutlet weak var cvInput: UITextView!
+    @IBOutlet weak var ratingInput: UITextField!
     
     
     override func viewDidLoad() {
@@ -35,20 +36,23 @@ class CreateViewController: UIViewController {
         let occupation = occupationInput.text?.trimmingCharacters(in: .whitespacesAndNewlines)
         let dni = dniInput.text?.trimmingCharacters(in: .whitespacesAndNewlines)
         let cv = cvInput.text?.trimmingCharacters(in: .whitespacesAndNewlines)
+        let rating = ratingInput.text?.trimmingCharacters(in: .whitespacesAndNewlines)
         
         if name != nil && name != ""
             && surname != nil && surname != ""
             && age != nil && age != ""
             && occupation != nil && occupation != ""
             && dni != nil && dni != ""
-            && cv != nil && cv != "" {
+            && cv != nil && cv != ""
+            && rating != nil && rating != "" {
             
-            data["name"] = nameInput.text?.trimmingCharacters(in: .whitespacesAndNewlines)
-            data["surname"] = surnameInput.text?.trimmingCharacters(in: .whitespacesAndNewlines)
-            data["age"] = ageInput.text?.trimmingCharacters(in: .whitespacesAndNewlines)
-            data["occupation"] = occupationInput.text?.trimmingCharacters(in: .whitespacesAndNewlines)
-            data["dni"] = dniInput.text?.trimmingCharacters(in: .whitespacesAndNewlines)
-            data["cv"] = cvInput.text?.trimmingCharacters(in: .whitespacesAndNewlines)
+            data["name"] = name
+            data["surname"] = surname
+            data["age"] = age
+            data["occupation"] = occupation
+            data["dni"] = dni
+            data["cv"] = cv
+            data["rating"] = rating
             
             model.addNewContact(data: data) {
                 self.navigationController?.popViewController(animated: true)

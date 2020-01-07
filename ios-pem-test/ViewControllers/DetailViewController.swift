@@ -20,6 +20,7 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var occupationLabel: UILabel!
     @IBOutlet weak var dniLabel: UILabel!
     @IBOutlet weak var cvLabel: UILabel!
+    @IBOutlet weak var ratingLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,6 +35,7 @@ class DetailViewController: UIViewController {
         occupationLabel.text = contact!.occupation
         dniLabel.text = contact!.dni
         cvLabel.text = contact!.cv
+        ratingLabel.text = "\(contact!.rating)"
     }
 
     @IBAction func onDeleteTapped(_ sender: UIBarButtonItem) {

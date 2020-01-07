@@ -13,6 +13,7 @@ class ContactCell: UITableViewCell {
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var surnameLabel: UILabel!
     @IBOutlet weak var dniLabel: UILabel!
+    @IBOutlet weak var ratingLabel: UILabel!
     
 }
 
@@ -50,6 +51,7 @@ class ListViewController: UITableViewController {
         cell.nameLabel.text = contact.name
         cell.surnameLabel.text = contact.surname
         cell.dniLabel.text = contact.dni
+        cell.ratingLabel.text = "\(contact.rating)"
         
         return cell
     }

@@ -18,5 +18,6 @@ class Contact: Object {
     @objc dynamic var occupation: String = ""
     @objc dynamic var dni: String = ""
     @objc dynamic var cv: String = ""
+    @objc dynamic var rating: Int = 0
     
 }

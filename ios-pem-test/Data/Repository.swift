@@ -47,6 +47,7 @@ class Repository {
             newContact.occupation = data["occupation"]!
             newContact.dni = data["dni"]!
             newContact.cv = data["cv"]!
+            newContact.rating = Int(data["rating"]!)!
             realm.add(newContact)
         }
         completion()
