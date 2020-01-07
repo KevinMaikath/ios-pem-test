@@ -8,6 +8,14 @@
 
 import UIKit
 
+class ContactCell: UITableViewCell {
+    
+    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var surnameLabel: UILabel!
+    @IBOutlet weak var dniLabel: UILabel!
+    
+}
+
 
 class ListViewController: UITableViewController {
     
@@ -36,10 +44,12 @@ class ListViewController: UITableViewController {
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "contactCell", for: indexPath) as! UITableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "contactCell", for: indexPath) as! ContactCell
         
         let contact = model.contactList[indexPath.row]
-        cell.textLabel?.text = contact.name + " " + contact.surname
+        cell.nameLabel.text = contact.name
+        cell.surnameLabel.text = contact.surname
+        cell.dniLabel.text = contact.dni
         
         return cell
     }
@@ -64,4 +74,8 @@ class ListViewController: UITableViewController {
         }
     }
 
+    
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 80
+    }
 }

@@ -17,7 +17,8 @@ class CreateViewController: UIViewController {
     @IBOutlet weak var ageInput: UITextField!
     @IBOutlet weak var occupationInput: UITextField!
     @IBOutlet weak var dniInput: UITextField!
-    @IBOutlet weak var cvInput: UITextField!
+    @IBOutlet weak var cvInput: UITextView!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
